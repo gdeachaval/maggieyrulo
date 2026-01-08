@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Regalos – Maggie & Rulo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1><span>Maggie</span> & <span>Rulo</span></h1>
+  <p>
+    Si querés hacernos un regalo, acá te dejamos algunas ideas para esta nueva etapa.
+    ¡Gracias por acompañarnos!
+  </p>
+</header>
+
+<section class="currency-selector">
+  <button class="currency-btn active" data-currency="ars">Pesos</button>
+  <button class="currency-btn" data-currency="usd">USD</button>
+</section>
+
+<section class="gift-controls">
+  <label for="sort">Ordenar por:</label>
+  <select id="sort">
+    <option value="default">Por defecto</option>
+    <option value="asc">Precio (menor a mayor)</option>
+    <option value="desc">Precio (mayor a menor)</option>
+  </select>
+</section>
+
+<section class="gift-list">
+
+  <!-- 1 -->
+  <div class="gift-item" data-price="220000" data-currency="ars">
+    <img src="1 - Almuerzo gigante.jpeg" alt="Almuerzo gigante">
+    <h3>Almuerzo gigante</h3>
+    <p>$220.000</p>
+    <button onclick="openModal('ALMUERZO GIGANTE')">Regalar</button>
+  </div>
+
+  <!-- 2 -->
+  <div class="gift-item" data-price="390000" data-currency="ars">
+    <img src="2 - Parrilla movil.jpg" alt="Parrilla móvil">
+    <h3>Parrilla móvil</h3>
+    <p>$390.000</p>
+    <button onclick="openModal('PARRILLA MÓVIL')">Regalar</button>
+  </div>
+
+  <!-- 3 -->
+  <div class="gift-item" data-price="290000" data-currency="ars">
+    <img src="3 - Aspiradora.jpeg" alt="Aspiradora">
+    <h3>Aspiradora</h3>
+    <p>$290.000</p>
+    <button onclick="openModal('ASPIRADORA')">Regalar</button>
+  </div>
+
+  <!-- 4 -->
+  <div class="gift-item" data-price="600000" data-currency="ars">
+    <img src="4 - Bar.jpg" alt="Bar">
+    <h3>Bar</h3>
+    <p>$600.000</p>
+    <button onclick="openModal('BAR')">Regalar</button>
+  </div>
+
+  <!-- 5 -->
+  <div class="gift-item" data-price="100" data-currency="usd">
+    <img src="9 - Comida en la playa mariscos.jpg" alt="Comida en la playa">
+    <h3>Comida en la playa</h3>
+    <p>100 USD</p>
+    <button onclick="openModal('COMIDA EN LA PLAYA')">Regalar</button>
+  </div>
+
+  <!-- 6 -->
+  <div class="gift-item" data-price="80" data-currency="usd">
+    <img src="6 - Cafetera.jpg" alt="Cafetera">
+    <h3>Cafetera</h3>
+    <p>80 USD</p>
+    <button onclick="openModal('CAFETERA')">Regalar</button>
+  </div>
+
+  <!-- 7 -->
+  <div class="gift-item" data-price="50000" data-currency="ars">
+    <img src="7 - Cafetera francesa.jpg" alt="Cafetera francesa">
+    <h3>Cafetera francesa</h3>
+    <p>$50.000</p>
+    <button onclick="openModal('CAFETERA FRANCESA')">Regalar</button>
+  </div>
+
+  <!-- 8 -->
+  <div class="gift-item" data-price="50" data-currency="usd">
+    <img src="8 - City Tour Japon.jpeg" alt="City Tour Japón">
+    <h3>City Tour Japón</h3>
+    <p>50 USD</p>
+    <button onclick="openModal('CITY TOUR JAPÓN')">Regalar</button>
+  </div>
+
+  <!-- 9 -->
+  <div class="gift-item" data-price="320000" data-currency="ars">
+    <img src="9 - Comida en la playa mariscos.jpg" alt="Comida mariscos">
+    <h3>Comida en la playa (mariscos)</h3>
+    <p>$320.000</p>
+    <button onclick="openModal('COMIDA MARISCOS')">Regalar</button>
+  </div>
+
+  <!-- 10 -->
+  <div class="gift-item" data-price="1000" data-currency="usd">
+    <img src="10 - Computadora.jpeg" alt="Computadora">
+    <h3>Computadora</h3>
+    <p>1000 USD</p>
+    <button onclick="openModal('COMPUTADORA')">Regalar</button>
+  </div>
+
+  <!-- 11 -->
+  <div class="gift-item" data-price="200" data-currency="usd">
+    <img src="11 - Cuadro.jpeg">
+    <h3>Cuadro</h3>
+    <p>200 USD</p>
+    <button onclick="openModal('CUADRO')">Regalar</button>
+  </div>
+
+  <!-- 12 -->
+  <div class="gift-item" data-price="220" data-currency="usd">
+    <img src="12 - curso de surf.jpeg">
+    <h3>Curso de surf</h3>
+    <p>220 USD</p>
+    <button onclick="openModal('CURSO SURF')">Regalar</button>
+  </div>
+
+  <!-- 13 -->
+  <div class="gift-item" data-price="100000" data-currency="ars">
+    <img src="13 - Farolito exterior.jpg">
+    <h3>Farolito exterior</h3>
+    <p>$100.000</p>
+    <button onclick="openModal('FAROLITO')">Regalar</button>
+  </div>
+
+  <!-- 14 -->
+  <div class="gift-item" data-price="320" data-currency="usd">
+    <img src="14 - Entradas fiesta electronica.jpg">
+    <h3>Entradas fiesta electrónica</h3>
+    <p>320 USD</p>
+    <button onclick="openModal('FIESTA')">Regalar</button>
+  </div>
+
+  <!-- 15 -->
+  <div class="gift-item" data-price="1200000" data-currency="ars">
+    <img src="15 - Heladera.jpeg">
+    <h3>Heladera</h3>
+    <p>$1.200.000</p>
+    <button onclick="openModal('HELADERA')">Regalar</button>
+  </div>
+
+  <!-- 16 -->
+  <div class="gift-item" data-price="250000" data-currency="ars">
+    <img src="16 - Juego de sabanas y toallas.jpg">
+    <h3>Sábanas y toallas</h3>
+    <p>$250.000</p>
+    <button onclick="openModal('SABANAS TOALLAS')">Regalar</button>
+  </div>
+
+  <!-- 17 -->
+  <div class="gift-item" data-price="180000" data-currency="ars">
+    <img src="17 - Juego de sabanas pro.jpg">
+    <h3>Juego de sábanas</h3>
+    <p>$180.000</p>
+    <button onclick="openModal('SABANAS')">Regalar</button>
+  </div>
+
+  <!-- 18 -->
+  <div class="gift-item" data-price="110000" data-currency="ars">
+    <img src="18 - Juego de toallas pro.jpg">
+    <h3>Juego de toallas</h3>
+    <p>$110.000</p>
+    <button onclick="openModal('TOALLAS')">Regalar</button>
+  </div>
+
+  <!-- 19 -->
+  <div class="gift-item" data-price="1500000" data-currency="ars">
+    <img src="19 - Curso de Kite.jpg">
+    <h3>Curso de kite</h3>
+    <p>$1.500.000</p>
+    <button onclick="openModal('KITE')">Regalar</button>
+  </div>
+
+  <!-- 20 -->
+  <div class="gift-item" data-price="200000" data-currency="ars">
+    <img src="20 - Lampara de pie (2).jpg">
+    <h3>Lámpara</h3>
+    <p>$200.000</p>
+    <button onclick="openModal('LAMPARA')">Regalar</button>
+  </div>
+
+  <!-- 21 -->
+  <div class="gift-item" data-price="450000" data-currency="ars">
+    <img src="21 - Lampara de pie.jpg">
+    <h3>Lámpara de pie</h3>
+    <p>$450.000</p>
+    <button onclick="openModal('LAMPARA PIE')">Regalar</button>
+  </div>
+
+  <!-- 22 -->
+  <div class="gift-item" data-price="500000" data-currency="ars">
+    <img src="22 - Lavarropas.jpg">
+    <h3>Lavarropas</h3>
+    <p>$500.000</p>
+    <button onclick="openModal('LAVARROPAS')">Regalar</button>
+  </div>
+
+  <!-- 23 -->
+  <div class="gift-item" data-price="130000" data-currency="ars">
+    <img src="23 - Licuadora.jpeg">
+    <h3>Licuadora</h3>
+    <p>$130.000</p>
+    <button onclick="openModal('LICUADORA')">Regalar</button>
+  </div>
+
+  <!-- 24 -->
+  <div class="gift-item" data-price="120000" data-currency="ars">
+    <img src="24 - Limpiavidrios.jpeg">
+    <h3>Limpiavidrios</h3>
+    <p>$120.000</p>
+    <button onclick="openModal('LIMPIAVIDRIOS')">Regalar</button>
+  </div>
+
+  <!-- 25 -->
+  <div class="gift-item" data-price="350" data-currency="usd">
+    <img src="25 - Paseo en moto de agua.jpg">
+    <h3>Moto de agua</h3>
+    <p>350 USD</p>
+    <button onclick="openModal('MOTO AGUA')">Regalar</button>
+  </div>
+
+  <!-- 26 -->
+  <div class="gift-item" data-price="300" data-currency="usd">
+    <img src="26 - Hotel noche de boda.jpg">
+    <h3>Noche de bodas</h3>
+    <p>300 USD</p>
+    <button onclick="openModal('HOTEL')">Regalar</button>
+  </div>
+
+  <!-- 27 -->
+  <div class="gift-item" data-price="400" data-currency="usd">
+    <img src="27 - Parlantes.jpg">
+    <h3>Parlantes</h3>
+    <p>400 USD</p>
+    <button onclick="openModal('PARLANTES')">Regalar</button>
+  </div>
+
+  <!-- 28 -->
+  <div class="gift-item" data-price="700000" data-currency="ars">
+    <img src="28 - Parrilla fija.jpg">
+    <h3>Parrilla fija</h3>
+    <p>$700.000</p>
+    <button onclick="openModal('PARRILLA FIJA')">Regalar</button>
+  </div>
+
+  <!-- 29 -->
+  <div class="gift-item" data-price="150" data-currency="usd">
+    <img src="29 - Paseo en bote Phi Phi 2.jpg">
+    <h3>Paseo Phi Phi II</h3>
+    <p>150 USD</p>
+    <button onclick="openModal('PHI PHI 2')">Regalar</button>
+  </div>
+
+  <!-- 30 -->
+  <div class="gift-item" data-price="180" data-currency="usd">
+    <img src="30 - Paseo en bote Tailandia.jpeg">
+    <h3>Paseo en Tailandia</h3>
+    <p>180 USD</p>
+    <button onclick="openModal('TAILANDIA')">Regalar</button>
+  </div>
+
+  <!-- 31 -->
+  <div class="gift-item" data-price="650" data-currency="usd">
+    <img src="31 - Paseo en globo.jpeg">
+    <h3>Paseo en globo</h3>
+    <p>650 USD</p>
+    <button onclick="openModal('GLOBO')">Regalar</button>
+  </div>
+
+  <!-- 32 -->
+  <div class="gift-item" data-price="170" data-currency="usd">
+    <img src="32 - Paseo en Lan Ha Bay.jpg">
+    <h3>Lan Ha Bay</h3>
+    <p>170 USD</p>
+    <button onclick="openModal('LAN HA BAY')">Regalar</button>
+  </div>
+
+  <!-- 33 -->
+  <div class="gift-item" data-price="240" data-currency="usd">
+    <img src="33 - Paseo en moto Vietnam.jpg">
+    <h3>Moto en Vietnam</h3>
+    <p>240 USD</p>
+    <button onclick="openModal('MOTO VIETNAM')">Regalar</button>
+  </div>
+
+  <!-- 34 -->
+  <div class="gift-item" data-price="270" data-currency="usd">
+    <img src="34 - paseo en Tailandia.jpg">
+    <h3>Moto en Tailandia</h3>
+    <p>270 USD</p>
+    <button onclick="openModal('MOTO TAILANDIA')">Regalar</button>
+  </div>
+
+  <!-- 35 -->
+  <div class="gift-item" data-price="900000" data-currency="ars">
+    <img src="35 - Pizzero.jpeg">
+    <h3>Horno pizzero</h3>
+    <p>$900.000</p>
+    <button onclick="openModal('PIZZERO')">Regalar</button>
+  </div>
+
+  <!-- 36 -->
+  <div class="gift-item" data-price="140000" data-currency="ars">
+    <img src="36 Sandwichera 2.jpg">
+    <h3>Sandwichera</h3>
+    <p>$140.000</p>
+    <button onclick="openModal('SANDWICHERA')">Regalar</button>
+  </div>
+
+  <!-- 37 -->
+  <div class="gift-item" data-price="400000" data-currency="ars">
+    <img src="37 - Sandwichera gigante.jpg">
+    <h3>Sandwichera gigante</h3>
+    <p>$400.000</p>
+    <button onclick="openModal('SANDWICHERA GIGANTE')">Regalar</button>
+  </div>
+
+  <!-- 38 -->
+  <div class="gift-item" data-price="190" data-currency="usd">
+    <img src="38 - Visita santuario de elefantes.jpg">
+    <h3>Santuario de elefantes</h3>
+    <p>190 USD</p>
+    <button onclick="openModal('ELEFANTES')">Regalar</button>
+  </div>
+
+  <!-- 39 -->
+  <div class="gift-item" data-price="350000" data-currency="ars">
+    <img src="39 - Set de sartenes.jpg">
+    <h3>Set de sartenes</h3>
+    <p>$350.000</p>
+    <button onclick="openModal('SARTENES')">Regalar</button>
+  </div>
+
+  <!-- 40 -->
+  <div class="gift-item" data-price="600" data-currency="usd">
+    <img src="40 - Tabla de surf Maggie.jpeg">
+    <h3>Tabla de surf Maggie</h3>
+    <p>600 USD</p>
+    <button onclick="openModal('SURF MAGGIE')">Regalar</button>
+  </div>
+
+  <!-- 41 -->
+  <div class="gift-item" data-price="400" data-currency="usd">
+    <img src="41 - Tabla de surf Jose.jpg">
+    <h3>Tabla de surf José</h3>
+    <p>400 USD</p>
+    <button onclick="openModal('SURF JOSE')">Regalar</button>
+  </div>
+
+  <!-- 42 -->
+  <div class="gift-item" data-price="2500000" data-currency="ars">
+    <img src="42 - Termomix.jpg">
+    <h3>Termomix</h3>
+    <p>$2.500.000</p>
+    <button onclick="openModal('TERMOMIX')">Regalar</button>
+  </div>
+
+  <!-- 43 -->
+  <div class="gift-item" data-price="240" data-currency="usd">
+    <img src="43 - Visita a templo.jpg">
+    <h3>Visita a templo</h3>
+    <p>240 USD</p>
+    <button onclick="openModal('TEMPLO')">Regalar</button>
+  </div>
+
+  <!-- 44 -->
+  <div class="gift-item" data-price="1600" data-currency="usd">
+    <img src="44 - Vuelo de avion Bali.jpg">
+    <h3>Vuelo a Bali</h3>
+    <p>1600 USD</p>
+    <button onclick="openModal('VUELO BALI')">Regalar</button>
+  </div>
+
+  <!-- 45 -->
+  <div class="gift-item" data-price="0" data-currency="usd">
+    <img src="45 - Monto libre en dolares.jpg" alt="Monto libre USD">
+    <h3>Monto libre en USD</h3>
+    <p>Importe a elección</p>
+    <button onclick="openModal('MONTO LIBRE USD')">Regalar</button>
+  </div>
+
+  <!-- 46 -->
+  <div class="gift-item" data-price="0" data-currency="ars">
+    <img src="46 - Monto libre usd.jpg" alt="Monto libre ARS">
+    <h3>Monto libre en Pesos</h3>
+    <p>Importe a elección</p>
+    <button onclick="openModal('MONTO LIBRE ARS')">Regalar</button>
+  </div>
+
+  <!-- 47 -->
+  <div class="gift-item" data-price="270" data-currency="usd">
+    <img src="Paracaidas Maggie.jpeg" alt="Paracaídas">
+    <h3>Paracaídas Maggie</h3>
+    <p>270 USD</p>
+    <button onclick="openModal('PARACAÍDAS MAGGIE')">Regalar</button>
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="bankModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>Datos Bancarios</h2>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="ars">Pesos</button>
+      <button class="tab-btn" data-tab="usd">USD</button>
+    </div>
+
+    <div class="tab-content active" id="tab-ars">
+      <p><strong>Banco Galicia</strong></p>
+      <p>María Magdalena Raggio Beloqui</p>
+      <p>CTA: 4027764-9 130-0</p>
+      <div class="cbu-container">
+        <span id="cbu-ars">CBU: 0070130930004027764906</span>
+        <button class="copy-btn" onclick="copyCBU('cbu-ars')">📋 Copiar</button>
+      </div>
+      <p>Alias: magda.raggio</p>
+    </div>
+
+    <div class="tab-content" id="tab-usd">
+      <p><strong>Banco Galicia</strong></p>
+      <p>María Magdalena Raggio Beloqui</p>
+      <p>CTA: 4008801-3 018-8</p>
+      <div class="cbu-container">
+        <span id="cbu-usd">CBU: 0070018431004008801384</span>
+        <button class="copy-btn" onclick="copyCBU('cbu-usd')">📋 Copiar</button>
+      </div>
+      <p>Alias: raggio.magda</p>
+    </div>
+
+    <hr>
+    <p><em id="motivo-text"></em></p>
+    <p id="copy-status" class="copy-status"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

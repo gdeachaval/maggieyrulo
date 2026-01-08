@@ -1,0 +1,300 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #3f4d35; /* darker elegant green */
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+header h1 {
+  font-family: 'Allura', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header h1 span {
+  font-family: 'Allura', cursive;
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Gift grid */
+.gift-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gift-item {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.gift-item.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.gift-item.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gift-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.gift-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* circular */
+  margin-bottom: 1rem;
+  border: 0px solid #6e7d5b; /* lighter elegant frame */
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+.gift-item h3 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 1.4rem; /* a bit smaller to balance */
+  margin-bottom: 0.5rem;
+  color: #3f4d35;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gift-item p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #3f4d35;
+}
+
+/* Buttons */
+.gift-item button {
+  background-color: #3f4d35;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.gift-item button:hover {
+  background-color: #2f3928; /* darker hover */
+}
+
+.gift-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 1rem auto 0 auto;
+  padding: 0 2rem;
+  font-size: 0.95rem;
+}
+
+.gift-controls select {
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .gift-controls {
+    justify-content: center;
+  }
+  .gift-controls label {
+    font-size: 0.9rem;
+  }
+  .gift-controls select {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.modal-content h2 {
+  font-family: 'Allura', cursive;
+  color: #3f4d35;
+  margin-bottom: 0.2rem;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.modal-content p {
+  margin-bottom: 0.5rem;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.cbu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.copy-btn {
+  background: transparent;
+  color: #3f4d35;
+  border: 1px solid #3f4d35;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.copy-btn:hover {
+  background: #3f4d35;
+  color: white;
+}
+
+.copy-status {
+  color: #3f4d35;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.modal-content h3.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #eee;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.tab-btn.active {
+  background: #3f4d35;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.currency-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.currency-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+}
+
+.currency-btn.active {
+  background: #3f4d35;
+  color: white;
+}
